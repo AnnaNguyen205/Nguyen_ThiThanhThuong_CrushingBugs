@@ -67,7 +67,7 @@ body {
 .drop-zone {
 	width: 50%;
 	height: 50%;
-	/* border: thin dashed white; */
+	border: thin dashed white;
 	position: relative;
 }
 
