@@ -9,6 +9,10 @@ html {
 	box-sizing: inherit;
 }
 
+.hidden {
+	display: none;
+}
+
 body {
 	margin: 0px;
 	border: 0px;
@@ -67,7 +71,7 @@ body {
 .drop-zone {
 	width: 50%;
 	height: 50%;
-	border: thin dashed white;
+	/* border: thin dashed white; */
 	position: relative;
 }
 
@@ -124,4 +128,21 @@ footer {
 
 #buttonHolder img:hover {
 	opacity:.5;
+}
+
+#resetBut {
+	position: fixed;
+	padding: 10px;
+	width: 80px;
+	margin-left: 15px;
+	border: 3px solid white;
+	border-radius: 12px;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+#resetBut:hover {
+	background-color: #126f2ff6;
+	color: white;
 }
