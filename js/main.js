@@ -25,7 +25,7 @@ function changeBGImage(event) {
 }
 
 function handleStartDrag() {
-    console.log(`started dragging ${this}`);
+    console.log(`Started dragging ${this}`);
     draggedPiece = this;
 }
 
@@ -34,7 +34,14 @@ function handleOver(e) {
     console.log("Dragged Over");
 }
 
+//Bug#1: Multiple puzzle pieces can be dropped into a single drop zone.
+//An if statement was added to prevent it.
 function handleDrop() {
+    console.log("Dropped a piece")
+
+    if (this.children.length > 0) {
+        return; // If there is already a piece in the drop zone, the action can't be done.
+    }
     this.appendChild(draggedPiece);
 }
 
